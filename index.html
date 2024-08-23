@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration Form</title>
+    <title>Student Enrollment Form</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="form-container">
-        <h1>Registration Form</h1>
-        <form id="registrationForm">
+        <h1>Student Enrollment Form</h1>
+        <form id="enrollmentForm">
             <div class="form-group">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
@@ -19,18 +19,31 @@
                 <input type="email" id="email" name="email" required>
             </div>
             <div class="form-group">
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
+                <label for="website">Website:</label>
+                <input type="url" id="website" name="website">
             </div>
             <div class="form-group">
-                <button type="submit">Register</button>
+                <label for="imageLink">Image Link:</label>
+                <input type="url" id="imageLink" name="imageLink">
+            </div>
+            <div class="form-group">
+                <label>Gender:</label>
+                <label><input type="radio" name="gender" value="Male" required> Male</label>
+                <label><input type="radio" name="gender" value="Female"> Female</label>
+            </div>
+            <div class="form-group">
+                <label for="skills">Skills:</label>
+                <input type="checkbox" name="skills" value="Java"> Java
+                <input type="checkbox" name="skills" value="HTML"> HTML
+                <input type="checkbox" name="skills" value="CSS"> CSS
+            </div>
+            <div class="form-group">
+                <button type="reset">Clear</button>
+                <button type="submit">Enroll Student</button>
             </div>
         </form>
-        <div id="displayData" class="display-data">
-            <h2>Submitted Data:</h2>
-            <p id="displayName"></p>
-            <p id="displayEmail"></p>
-            <p id="displayPassword"></p>
+        <div id="enrolledStudents" class="enrolled-students">
+            <h2>Enrolled Students</h2>
         </div>
     </div>
     <script src="app.js"></script>
